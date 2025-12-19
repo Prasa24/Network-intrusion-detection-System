@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang=" ">
+
+<head>
+<title>Intrusion Predict</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<style>
+   main {
+       background-color: white;
+       padding: 30px;
+       margin: 20px auto;
+       border-radius: 8px;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+       max-width: 600px;
+   }
+
+   form {
+       display: flex;
+       flex-direction: column;
+       
+   }
+
+   label {
+       margin-top: 10px;
+       margin-bottom: 5px;
+       font-weight: bold;
+   }
+
+   input[type="number"],
+   input[type="text"],
+   input[type="date"],
+   select {
+       padding: 10px;
+       border: 1px solid #ccc;
+       border-radius: 5px;
+       font-size: 16px;
+   }
+
+   button {
+       margin-top: 20px;
+       padding: 12px;
+       background-color: #e78c42;
+       color: white;
+       border: none;
+       border-radius: 5px;
+       cursor: pointer;
+       font-size: 16px;
+   }
+
+   button:hover {
+       background-color: #e28335;
+   }
+
+   footer {
+       background-color: #007bff;
+       color: white;
+       text-align: center;
+       padding: 15px;
+       margin-top: 30px;
+       position: fixed;
+       width: 100%;
+       bottom: 0;
+   }
+
+   /* Responsive Design */
+   @media (max-width: 600px) {
+       main {
+           padding: 20px;
+       }
+
+       header h1 {
+           font-size: 24px;
+       }
+
+       footer {
+           position: static;
+           padding: 10px;
+           
+       }
+   }
+</style>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">
+    <section> 
+      <!-- ################################################################################################ -->
+      <div></div>
+      <div>
+        <h1 id="logo"><a href="{{ url_for('home') }}">Intrusion Detection</a></h1>
+      </div>
+      <div>
+        <form class="clear" method="post" action="#">
+          <fieldset>
+            <!--<legend>Search:</legend>
+            <input type="search" value="" placeholder="Search Here&hellip;">
+            <button class="fa fa-search" type="submit" title="Search"><em>Search</em></button>-->
+          </fieldset>
+        </form>
+      </div>
+      <!-- ################################################################################################ -->
+    </section>
+    <nav id="mainav"> 
+      <!-- ################################################################################################ -->
+      <ul class="clear">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        
+        <li><a href="#">About</a></li>
+        <li><a href="{{url_for('login')}}">Login</a></li>
+        <li><a href="{{url_for('register')}}">Register</a></li>
+    
+      </ul>
+      <!-- ################################################################################################ -->
+    </nav>
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="bgded overlay" style="background-image:url('{{ url_for('static', filename='images/demo/backgrounds/01.jpeg') }}');">
+  
+  <section id="breadcrumb" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Login</a></li>
+      <li><a href="#">Register</a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+    <h6 class="heading">Intrusion Detection</h6>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content"> 
+    <div id="comments">
+        <header>
+            <h1 style="text-align: center;">Intrusion Detection System</h1>
+        </header>
+        <main>
+            <form action="/predict" method="POST" id="predictionForm">
+                <label for="duration">Duration:</label>
+                <input type="number" id="duration" name="duration" required>
+    
+                <label for="protocol_type">Protocol Type:</label>
+                <input type="text" id="protocol_type" name="protocol_type" required>
+    
+                <label for="service">Service:</label>
+                <input type="text" id="service" name="service" required>
+    
+                <label for="flag">Flag:</label>
+                <input type="text" id="flag" name="flag" required>
+    
+                <label for="src_bytes">Source Bytes:</label>
+                <input type="number" id="src_bytes" name="src_bytes" required>
+    
+                <label for="dst_bytes">Destination Bytes:</label>
+                <input type="number" id="dst_bytes" name="dst_bytes" required>
+    
+                <label for="count">Count:</label>
+                <input type="number" id="count" name="count" required>
+    
+                <label for="srv_count">Service Count:</label>
+                <input type="number" id="srv_count" name="srv_count" required>
+    
+                <label for="same_srv_rate">Same Service Rate:</label>
+                <input type="number" step="0.01" id="same_srv_rate" name="same_srv_rate" required>
+    
+                <label for="dst_host_count">Destination Host Count:</label>
+                <input type="number" id="dst_host_count" name="dst_host_count" required>
+    
+                <label for="dst_host_srv_count">Destination Host Service Count:</label>
+                <input type="number" id="dst_host_srv_count" name="dst_host_srv_count" required>
+    
+                <label for="dst_host_same_srv_rate">Destination Host Same Service Rate:</label>
+                <input type="number" step="0.01" id="dst_host_same_srv_rate" name="dst_host_same_srv_rate" required>
+    
+                <button type="submit" style="text-align: center;">Predict</button>
+            </form>
+        </main>
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+   
+    <div class="one_quarter">
+      
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2024 - All Rights Reserved - <a href="#">Intrusion Detection</a></p>
+    <p class="fl_right"><a target="_blank" href="" title=""></a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
+
+
+
+

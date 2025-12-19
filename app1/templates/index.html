@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="">
+
+<head>
+<title>Cloud Intrusion</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">
+    <section> 
+      <!-- ################################################################################################ -->
+      <div> </div>
+      <div>
+        <h1 id="logo"><a href="#">Intrusion Detection</a></h1>
+      </div>
+      <div>
+        <form class="clear" method="post" action="#">
+          <fieldset>
+            <!--<legend>Search:</legend>
+            <input type="search" value="" placeholder="Search Here&hellip;">
+            <button class="fa fa-search" type="submit" title="Search"><em>Search</em></button> -->
+          </fieldset>
+        </form>
+      </div>
+      <!-- ################################################################################################ -->
+    </section>
+    <nav id="mainav"> 
+      <!-- ################################################################################################ -->
+      <ul class="clear">
+        <li class="active"><a href="#">Home</a></li>
+       
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{url_for('login')}}">Login</a></li>
+        <li><a href="{{url_for('register')}}">Register</a></li>
+      
+      </ul>
+      <!-- ################################################################################################ -->
+    </nav>
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="bgded" style="background-image:url('{{ url_for('static', filename='images/demo/backgrounds/01.jpeg') }}');">
+  <div id="pageintro" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <article>
+      <h3 class="heading">Intrusion Detection</h3>
+      <p>Cloud intrusion refers to unauthorized access or malicious activities in cloud computing environments. These intrusions occur when attackers exploit vulnerabilities in the cloud infrastructure, applications, or user accounts to gain access to sensitive data, disrupt services, or manipulate systems. Cloud environments are often targeted due to their scalability and centralized storage, making them valuable repositories for data. Common methods of intrusion include phishing, exploiting misconfigured settings, weak passwords, or vulnerabilities in APIs. Preventing cloud intrusion requires robust security measures, such as encryption, multi-factor authentication (MFA), regular security audits, and real-time monitoring for unusual activity.</p>
+      <footer><a class="btn" href="{{ url_for('about') }}">Learn More</a></footer>
+    </article>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h6 class="heading">Impacts of Cloud Intrusion</h6>
+      <p>Here are four impact in DOS Attack</p>
+    </div>
+    <div class="group">
+      <div class="one_half first">
+        <img class="inspace-15 borderedbox" src="{{ url_for('static', filename='images/demo/474x356.jpeg') }}" alt="">
+    </div>    
+      <div class="one_half">
+        <ul class="nospace group inspace-15">
+          <li class="one_half first btmspace-50">
+            <article>
+              <h6 class="heading"><a href="#">Data Breach and Loss</a></h6>
+              <p class="nospace">Cloud intrusions often lead to unauthorized access to sensitive or confidential information stored in the cloud. This can include personal data, financial records, trade secrets, or intellectual property. </p>
+            </article>
+          </li>
+          <li class="one_half btmspace-50">
+            <article>
+              <h6 class="heading"><a href="#">Financial Loss</a></h6>
+              <p class="nospace">Organizations may face significant financial repercussions due to downtime, loss of customer trust, or legal penalties resulting from compliance violations. </p>
+            </article>
+          </li>
+          <li class="one_half first">
+            <article>
+              <h6 class="heading"><a href="#">Service Disruption</a></h6>
+              <p class="nospace">Intrusions can disrupt the normal operations of cloud-based services, leading to downtime or degraded performance.</p>
+            </article>
+          </li>
+          <li class="one_half">
+            <article>
+              <h6 class="heading"><a href="#">Damage to Reputation</a></h6>
+              <p class="nospace">A cloud intrusion can tarnish an organization's reputation by eroding customer trust and stakeholder confidence. </p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <section class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h6 class="heading">Types of Cloud Intrusion</h6>
+      <p>Some of the common attacks are</p>
+    </div>
+    <ul class="nospace group overview services">
+      <li class="one_third">
+        <article><a href="#"></a>
+          <h6 class="heading"><a href="#">Data Breaches</a></h6>
+          <p>Unauthorized access to sensitive information stored in the cloud, often due to weak security measures or misconfigurations.</p>
+          <footer><a href="#"></a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"></a>
+          <h6 class="heading"><a href="#">Account Hijacking</a></h6>
+          <p>Attackers compromise user credentials to take control of cloud accounts and misuse resources or access data.</p>
+          <footer><a href="#"></a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"></a>
+          <h6 class="heading"><a href="#">Insider Threats</a></h6>
+          <p>Malicious or negligent actions by employees or contractors who exploit their access to cloud systems.</p>
+          <footer><a href="#"></a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"></a>
+          <h6 class="heading"><a href="#">Denial of Service (DoS) Attacks</a></h6>
+          <p>Overloading cloud services with excessive requests, causing disruptions and making services unavailable to legitimate users.</p>
+          <footer><a href="#"></a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"></a>
+          <h6 class="heading"><a href="#">Man-in-the-Middle (MitM) Attacks</a></h6>
+          <p>Interception of data transmitted between users and the cloud, leading to data theft or manipulation.</p>
+          <footer><a href="#"></a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"></i></a>
+          <h6 class="heading"><a href="#">API Exploitation</a></h6>
+          <p>Attacks that exploit vulnerabilities in cloud APIs to gain unauthorized access or control over cloud services.</p>
+          <footer><a href="#"></a></footer>
+        </article>
+      </li>
+    </ul>
+    <footer class="center"><a class="btn" href="{{ url_for('about') }}">Learn More</a></footer>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2024 - All Rights Reserved - <a href="#">Intrusion Detection</a></p>
+    <p class="fl_right"><a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates"></a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>

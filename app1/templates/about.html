@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang=" ">
+
+<head>
+<title>Cloud Intrusion</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">
+    <section> 
+      <!-- ################################################################################################ -->
+      <div></div>
+      <div>
+        <h1 id="logo"><a href="{{ url_for('home') }}">Cloud Intrusion</a></h1>
+      </div>
+      <div>
+        <form class="clear" method="post" action="#">
+          <fieldset>
+           <!-- <legend>Search:</legend>
+            <input type="search" value="" placeholder="Search Here&hellip;">
+            <button class="fa fa-search" type="submit" title="Search"><em>Search</em></button> -->
+          </fieldset>
+        </form>
+      </div>
+      <!-- ################################################################################################ -->
+    </section>
+    <nav id="mainav"> 
+      <!-- ################################################################################################ -->
+      <ul class="clear">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        
+        <li><a href="#">About</a></li>
+        <li><a href="{{url_for('login')}}">Login</a></li>
+        <li><a href="{{url_for('register')}}">Register</a></li>
+    
+      </ul>
+      <!-- ################################################################################################ -->
+    </nav>
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="bgded overlay" style="background-image:url('{{ url_for('static', filename='images/demo/backgrounds/01.jpeg') }}');">
+  
+  <section id="breadcrumb" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Login</a></li>
+      <li><a href="#">Register</a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+    <h6 class="heading">Cloud Intrusion - About</h6>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content"> 
+      <!-- ################################################################################################ -->
+      <h1>Cloud Intrusion Detection</h1>
+      
+      <p>Cloud Intrusion Detection refers to the process of monitoring and analyzing activities within a cloud environment to identify and respond to unauthorized access, suspicious behavior, or potential cyber threats. </p>
+      <p>As cloud computing becomes increasingly integral to businesses, protecting sensitive data and ensuring secure operations is critical. Cloud Intrusion Detection Systems (CIDS) serve as specialized tools that provide real-time monitoring and detection of anomalies, such as unauthorized access attempts, unusual traffic patterns, or malware activities.</p>
+      <img class="imgl borderedbox inspace-5" src="{{ url_for('static', filename='images/demo/imgl.jpeg') }}" alt="" >
+      <p> These systems use advanced techniques, including machine learning, behavioral analysis, and pattern recognition, to differentiate between normal and malicious activities.</p>
+      <p>CIDS can be deployed in various forms, such as host-based systems for individual virtual machines or network-based systems for monitoring traffic across cloud networks. A robust detection strategy integrates log analysis, real-time alerts, and actionable insights to help administrators respond swiftly to potential threats. </p>
+      <p> Cloud intrusion detection is essential for compliance with regulatory standards and to maintain customer trust, particularly in industries dealing with sensitive data, such as healthcare and finance. </p>
+      <p>However, effective implementation requires overcoming challenges like high volumes of data, encryption complexities, and managing false positives. By incorporating CIDS, organizations can enhance their cloud security posture and minimize the risk of significant breaches or disruptions.</p>
+      <div id="comments">
+        
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+   
+    <div class="one_quarter">
+      
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2024 - All Rights Reserved - <a href="#">Cloud Intrusion</a></p>
+    <p class="fl_right"><a target="_blank" href="" title=""></a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
